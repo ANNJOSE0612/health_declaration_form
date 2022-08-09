@@ -3,4 +3,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+
+  #get "/health_declaration_forms", to: "health_declaration_forms#index"
+
+  resources :health_declaration_forms
+   
 end

@@ -1,16 +1,37 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>HealthdecformApp</title>
+    <title>Health declaration form</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "custom"%>
     <%= javascript_importmap_tags %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %> 
   </head>
 
   <body>
-    <%= yield %>
+
+    <%= render 'layouts/messages' %>
+
+    <nav class="navbar navbar-light bg-light page-nav">
+      <span class="navbar-brand mb-0 h1 mx-auto page-title">Health Declaration Form</span>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+      <div class="col-2"></div>
+        <div class="col-8">
+
+        <%= yield %>
+
+        </div>
+        <div class="col-2"></div>
+     </div>
+    </div>
+
+
   </body>
 </html>

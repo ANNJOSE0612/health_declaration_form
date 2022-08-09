@@ -1,0 +1,35 @@
+<!--<h1>Health Declaration Form Data</h1>-->
+<div class="row">
+<div class="col">
+
+    
+        
+        <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Symptoms</th>
+            <th scope="col">Contact with Suspect</th>
+            <th scope="col">Temperature</th>
+        </tr>
+        </thead>
+
+        <% @health_declaration_form.each do |health_declaration_form| %>
+        <tbody>
+        <tr>
+            <td><%= health_declaration_form.name %></td>
+            <td><%= health_declaration_form.symptom %></td>
+            <td><%= health_declaration_form.suspect_contact %></td>
+            <td><%= health_declaration_form.temperature %></td>
+        </tr>
+        </tbody>
+        <% end %>
+        </table>
+    
+    <br />
+    
+    <%= link_to 'Form', new_health_declaration_form_path %>
+
+
+</div>
+</div>

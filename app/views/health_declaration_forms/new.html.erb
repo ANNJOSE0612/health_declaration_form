@@ -1,0 +1,84 @@
+<!--<h1>Health Declaration Form</h1>-->
+
+<!--<%= form_with model: @health_declaration_form do |form| %>
+  <div>
+    <%= form.label :name, "Name:"  %><br>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.radio_button :symptom, "yes" %>
+    <%= form.label :symptom, "Yes" %>
+    <%= form.radio_button :symptom, "no" %>
+    <%= form.label :symptom, "No" %>
+  </div>
+
+  <div>
+    <%= form.label :suspect_contact, "suspect contact:" %><br>
+    <%= form.text_area :suspect_contact %>
+  </div>
+
+  <div>
+    <%= form.label :mobile_number, "Mobile Number:" %><br>
+    <%= form.text_area :mobile_number %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>-->
+
+
+<div class="row">
+<div class="col">
+
+    <% if @health_declaration_form.errors.any? %>
+        <h2>Form submission failed due to following errors</h2>
+        <ul>
+        <% @health_declaration_form.errors.full_messages.each do |msg|%>
+            <li><%= msg %></li>
+        <%end%>
+        </ul>
+    <% end %>
+
+    <%= simple_form_for @health_declaration_form do |f| %>
+
+    <div class="row hdf-row">
+        <div class="col">
+            <%= f.input :name, label: "1. Name", :label_html => { :class => 'hdf-row-label' } %>
+        </div>
+    </div>
+
+    <div class="row hdf-row">
+        <div class="col">
+            <%= f.input :temperature, label: "4. Temperature in Celcius" %>
+        </div>
+    </div>
+
+
+    <div class="row hdf-row">
+        <div class="col">
+            <%= f.input :symptom, collection: [[true, 'Yes'], [false, 'No']], label_method: :second, value_method: :first, as: :radio_buttons, label: "2. Do you have any of the following symptoms now or within the last 14 days: Cough, smell/taste impairment, fever, breathing difficulties, body aches, headaches, fatigue, sore throat, diarrhoea, and / or runny nose (even if your symptoms are mild)?" %>
+            <!--<%= f.collection_radio_buttons :symptom, [[true, 'Yes'], [false, 'No']], :first, :last%>-->
+        </div>
+    </div>
+
+    <div class="row hdf-row">
+        <div class="col">
+            <%= f.input :suspect_contact, collection: [[true, 'Yes'], [false, 'No']], label_method: :second, value_method: :first, as: :radio_buttons, label: "3. Have you been in contact with anyone who is suspected to have or/has been diagnosed with Covid-19 within the last 14 days?" %>
+        </div>
+    </div>
+
+    <div class="row hdf-row">
+        <div class="col">    
+        <button type="button" class="btn btn-success">    
+            <%= f.button :submit, "Submit", class: "btn btn-success" %>
+        </button>
+        </div>
+    </div>
+
+    <% end %>
+
+</div>
+</div>
+

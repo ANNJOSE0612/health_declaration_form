@@ -1,0 +1,35 @@
+
+
+
+.page-nav{
+    height: 100px; 
+    background-color: #048665 !important;
+}
+
+.page-title{
+    font-size: 30px; 
+    color: whitesmoke !important;
+}
+
+.hdf-row{
+    margin-top: 30px;
+    display: flex;
+    
+}
+
+.hdf-row-label{
+
+}
+
+.simple_form{
+    display: grid;
+    width:auto;
+}
+.simple_form label {
+    min-width:100%;
+  }
+  
+  .simple_form div.input {
+    min-width:100%;
+    
+  }
