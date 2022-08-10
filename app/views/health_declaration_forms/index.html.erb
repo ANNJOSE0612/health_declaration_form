@@ -8,9 +8,10 @@
         <thead>
         <tr>
             <th scope="col">Name</th>
+            <th scope="col">Temperature</th>
             <th scope="col">Symptoms</th>
             <th scope="col">Contact with Suspect</th>
-            <th scope="col">Temperature</th>
+            
         </tr>
         </thead>
 
@@ -18,9 +19,10 @@
         <tbody>
         <tr>
             <td><%= health_declaration_form.name %></td>
-            <td><%= health_declaration_form.symptom %></td>
-            <td><%= health_declaration_form.suspect_contact %></td>
             <td><%= health_declaration_form.temperature %></td>
+            <td><%= boolean_to_words(health_declaration_form.symptom) %></td>
+            <td><%= boolean_to_words(health_declaration_form.suspect_contact) %></td>
+        
         </tr>
         </tbody>
         <% end %>
@@ -28,7 +30,7 @@
     
     <br />
     
-    <%= link_to 'Form', new_health_declaration_form_path %>
+    <%= link_to 'Form', root_path %>
 
 
 </div>

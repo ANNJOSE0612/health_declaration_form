@@ -1,13 +1,25 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
+# one:
+#   name: MyString
+#   symptom: false
+#   suspect_contact: false
+#   mobile_number: MyText
+
+# two:
+#   name: MyString
+#   symptom: false
+#   suspect_contact: false
+#   mobile_number: MyText
+
 one:
   name: MyString
   symptom: false
   suspect_contact: false
-  mobile_number: MyText
+  temperature: 35
 
 two:
   name: MyString
   symptom: false
   suspect_contact: false
-  mobile_number: MyText
+  temperature: 35.0

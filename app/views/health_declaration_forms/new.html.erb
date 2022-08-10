@@ -29,21 +29,21 @@
 
     <div class="row hdf-row">
         <div class="col">
-            <%= f.input :temperature, label: "4. Temperature in Celcius" %>
+            <%= f.input :temperature, label: "2. Temperature in Celcius" %>
         </div>
     </div>
 
 
     <div class="row hdf-row">
         <div class="col">
-            <%= f.input :symptom, collection: [[true, 'Yes'], [false, 'No']], label_method: :second, value_method: :first, as: :radio_buttons, label: "2. Do you have any of the following symptoms now or within the last 14 days: Cough, smell/taste impairment, fever, breathing difficulties, body aches, headaches, fatigue, sore throat, diarrhoea, and / or runny nose (even if your symptoms are mild)?" %>
+            <%= f.input :symptom, collection: [[true, 'Yes'], [false, 'No']], label_method: :second, value_method: :first, as: :radio_buttons, label: "3. Do you have any of the following symptoms now or within the last 14 days: Cough, smell/taste impairment, fever, breathing difficulties, body aches, headaches, fatigue, sore throat, diarrhoea, and / or runny nose (even if your symptoms are mild)?" %>
             <!--<%= f.collection_radio_buttons :symptom, [[true, 'Yes'], [false, 'No']], :first, :last%>-->
         </div>
     </div>
 
     <div class="row hdf-row">
         <div class="col">
-            <%= f.input :suspect_contact, collection: [[true, 'Yes'], [false, 'No']], label_method: :second, value_method: :first, as: :radio_buttons, label: "3. Have you been in contact with anyone who is suspected to have or/has been diagnosed with Covid-19 within the last 14 days?" %>
+            <%= f.input :suspect_contact, collection: [[true, 'Yes'], [false, 'No']], label_method: :second, value_method: :first, as: :radio_buttons, label: "4. Have you been in contact with anyone who is suspected to have or/has been diagnosed with Covid-19 within the last 14 days?" %>
         </div>
     </div>
 

@@ -1,7 +1,12 @@
 class HealthDeclarationFormsController < ApplicationController
+    helper HealthDeclarationFormsHelper
 
     def index 
         @health_declaration_form = HealthDeclarationForm.all
+    end
+
+    def show
+
     end
 
     def new
@@ -13,7 +18,9 @@ class HealthDeclarationFormsController < ApplicationController
     
         if @health_declaration_form.save
             flash[:notice]="You have successfully submitted the form"
-          redirect_to @health_declaration_form
+          #redirect_to @health_declaration_form
+          #redirect_to root_path
+          redirect_to :action => 'new'
         else
           render :new, status: :unprocessable_entity
         end
