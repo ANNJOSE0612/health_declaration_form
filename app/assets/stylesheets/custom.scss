@@ -17,9 +17,14 @@
     
 }
 
-.hdf-row-label{
-
+.error-msg h4{
+    color: red
 }
+
+.error-msg ul{
+    color: red
+}
+
 
 .simple_form{
     display: grid;
@@ -27,9 +32,32 @@
 }
 .simple_form label {
     min-width:100%;
+    text-align: justify;
   }
   
   .simple_form div.input {
     min-width:100%;
+    
+  }
+
+  .simple_form {
+    
+    .error_notification{
+        color: red;
+        font-style: italic;
+        min-width:100%;
+    }
+
+    .error::before{
+        content: "\a";
+        white-space: pre;
+    }
+
+    .error{
+        color: red;
+        font-style: italic;
+        min-width:100%;
+    }
+
     
   }
