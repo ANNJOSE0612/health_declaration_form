@@ -17,7 +17,8 @@ class HealthDeclarationFormsController < ApplicationController
         @health_declaration_form = HealthDeclarationForm.new(health_declaration_form_params)
     
         if @health_declaration_form.save
-            flash[:notice]="You have successfully submitted the form"
+          flash[:success]="You have successfully submitted the form"
+
           #redirect_to @health_declaration_form
           #redirect_to root_path
           redirect_to :action => 'new'
